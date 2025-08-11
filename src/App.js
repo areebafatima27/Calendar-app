@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { ThemeProvider } from './contexts/ThemeContext';
+import { EventProvider } from './contexts/EventContext';
+import GlobalStyles from './styles/GlobalStyles';
+import Header from './components/Header';
+import Calendar from './components/Calendar';
+import styled from 'styled-components';
+
+const AppContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+`;
+
+const MainContent = styled.main`
+  flex: 1;
+  padding: 20px;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider>
+      <EventProvider>
+        <AppContainer>
+          <GlobalStyles />
+          <Header />
+          <MainContent>
+            <Calendar />
+          </MainContent>
+        </AppContainer>
+      </EventProvider>
+    </ThemeProvider>
   );
 }
 
