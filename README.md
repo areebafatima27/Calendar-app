@@ -13,6 +13,12 @@ A modern, responsive calendar application built with React that allows users to 
 - **Responsive Design**: Clean, modern UI with styled-components
 - **Local Storage**: Events and theme preferences persist between sessions
 
+## AI Declaration
+
+The following features in this project were built entirely with the assistance of AI tools:
+
+- **Dark/Light Mode Toggle (ThemeContext)** – Implemented global theme management using React Context API. Integrated Tailwind CSS dark mode class handling with persistent user preferences stored in localStorage. The toggle functionality was designed to allow seamless switching between light and dark themes across the entire application.
+
 ## Technologies Used
 
 - React
